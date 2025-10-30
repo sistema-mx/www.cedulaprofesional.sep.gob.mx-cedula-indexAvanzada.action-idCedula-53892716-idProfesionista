@@ -1,0 +1,1515 @@
+/*@font-face {
+	font-family: 'Open Sans', sans-serif!important;
+	font-style: normal;
+	font-weight: 400;
+	src: url('OpenSans-Regular.ttf') format('ttf');
+}
+
+body{color:#545454!important;
+font-family: 'Open Sans', sans-serif!important;
+}*/
+/*
+table {
+	max-width:1150px!important;
+	float:left!important;
+	}
+td{
+	left:auto!important;
+}*/
+
+
+table tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.consejos{
+	
+	/*align="left" style="font-family: 'Open Sans', sans-serif!important; font-size: 16px;  "*/
+	text-align:left;
+	font-family: 'Open Sans', sans-serif!important;
+	font-size: 16px;  }
+	
+.tableContenido{
+	background-color: #FFFFFF;
+}
+#datosSolicitud tbody tr td table{
+	background-color: inherit;
+ }
+.titulos{
+	color: #545454!important;
+    font-family: 'Open Sans', sans-serif!important;
+    font-size: 1em;    
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    line-height: normal;    
+}
+
+.subtitulos{
+	color: #545454!important;
+    font-family: 'Open Sans', sans-serif!important;
+    font-size: 16px;  font-style: normal;
+    font-variant: normal;    
+    line-height: normal;    
+}
+
+
+.contenidosWhite{
+	white-space: normal;	
+	font-family: 'Open Sans', sans-serif!important;
+	font-size: 16px;
+	padding-left:8px;
+	padding-right:8px;
+	line-height:40px;  }
+
+.contenidosRed{
+	white-space: normal;
+	color: #990000;
+	font-family: 'Open Sans', sans-serif!important;
+	font-size: 16px;  }
+
+.contenidoRequisito{	
+	color: #545454;
+	font-family: 'Open Sans', sans-serif!important;
+	font-size: 16px;
+	line-height:40px;
+	padding-left:8px; 
+	white-space: normal; }
+
+.contenidos{
+	white-space: normal!important;
+	color: #545454;
+	font-family: 'Open Sans', sans-serif!important;
+	font-size: 16px;  }
+
+.privacidad{
+	font-family: 'Open Sans', sans-serif!important;
+	font-size: 16px;
+	color:#545454;  }
+
+.contenidosBold{
+	white-space: normal;
+	color: #545454;
+	font-family: 'Open Sans', sans-serif!important;
+	font-size: 16px;  font-weight: bold;
+}
+
+.celdaGridLink A:link {
+	font-family: 'Open Sans', sans-serif!important;
+	text-align: right;
+	padding-right:10px;
+	color:#666666;
+	font-weight: normal;
+	font-size:12px;
+
+}
+.celdaGridLink A:visited {
+	font-family: 'Open Sans', sans-serif!important;
+	text-align: right;
+	padding-right:10px;
+	color:#666666;
+	font-weight: normal;
+	font-size:12px;
+}
+.celdaGridLink A:active {
+	font-family: 'Open Sans', sans-serif!important;
+	text-align: right;
+	padding-right:10px;
+	color:#666666;
+	font-weight: normal;
+	font-size:12px;
+}
+.celdaGridLink A:hover {
+	font-family: 'Open Sans', sans-serif!important;
+	text-align: right;
+	padding-right:10px;
+	color:#666666;
+	font-weight: normal;
+	font-size:12px;
+}
+
+.parrafo{
+	font-family: 'Open Sans', sans-serif!important;
+	font-size:0.7em;
+	text-align: justify;;
+}
+
+
+.navegacionButton .dijitButtonNode {
+	font-size: 16px;  background: transparent;
+	padding: 0.0em 0.0em 0.0em 0.0em;	
+	border:0px;
+}
+.navegacionButtonHover .dijitButtonNode {
+	background-color: transparent;
+	color: white !important;
+}
+.navegacionButtonFocused .dijitButtonNode {
+	border: white inset 0px;
+}
+.navegacionButtonActive .dijitButtonNode {
+	background-color: transparent;
+}
+
+
+.nihilo .dijitTreeExpandoOpened {
+	background: url('../img/spriteArrows.gif') no-repeat -18px top;
+}
+.nihilo .dijitTreeExpandoClosed {
+	background-image: url('../img/spriteArrows.gif');
+	
+}
+.nihilo .dijitTreeExpandoLeaf {
+	background: url('images/spriteTree.gif') no-repeat -36px top;
+}
+.nihilo .dijitTreeExpandoLoading {
+	background-image: url('images/treeExpand_loading.gif');
+}
+
+.nihilo .dijitTreeNode {
+    background : url('images/treeI.gif') no-repeat;
+    background-position : top left;
+    background-repeat : repeat-y;
+    zoom: 1;	
+}
+
+.nihilo .dijitTreeIsLast {
+    background: url('images/treeI_half.gif') no-repeat;
+}
+.nihilo .dijitTreeRowHover {
+	
+	background-image: url(images/treeHover.png);
+	background-repeat: repeat;
+	background-color: transparent !important;
+}
+
+
+/*
+.dialogTitle {
+	color: #000000;			
+	font-family: 'Open Sans', sans-serif!important;
+	font-size:10px;	
+	height: 14px;
+}*/
+
+
+
+.errorDnd {
+	white-space: nowrap;
+	color: #CC0000;
+	font-family: 'Open Sans', sans-serif!important;
+	font-size: 16px;  }
+
+
+.itemFolioPaquete{
+	white-space: nowrap;
+	color: #000000;
+	font-family: 'Open Sans', sans-serif!important;
+	font-size: 16px;  }
+
+
+.itemFolioSol{
+	white-space: nowrap;
+	color: #545454;
+	font-family: 'Open Sans', sans-serif!important;
+	font-size: 16px;  }
+	
+.nihilo .dijitInputContainer INPUT, .nihilo .dijitTextBox{
+	border-radius: 5px 5px 5px 5px; 
+	-moz-border-radius:5px 5px 5px 5px;  // Firefox
+	-webkit-border-radius: 5px 5px 5px 5px;  // WebKit y Safari
+	-khtml-border-radius: 5px 5px 5px 5px; 
+			
+	
+	padding-bottom: 4px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 4px !important;
+	margin-right: 10px !important;
+	width: 100%!important;
+	  /* max-width:700px!important;*/
+}
+
+
+.dijitTextBox:focus{
+	border: #66afe9;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+	outline-color:-moz-use-text-color;
+	outline-style:none;
+	outline-width:0;
+}
+.nihilo .dijitTextBoxFocused, .nihilo .dijitTextAreaFocused{
+	border: #66afe9 solid 1px!important;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6)!important;
+	outline-color:-moz-use-text-color!important;
+	outline-style:none!important;
+	outline-width:0!important;
+}
+/*
+.dj_ie INPUT.dijitTextBox,
+.dj_ie .dijitTextBox INPUT {	
+	font-size: 105%;
+	line-height: 120%; 
+}*/
+
+
+.dj_ie6 .dijitTextBox INPUT,
+.dj_ie6 INPUT.dijitTextBox,
+.dj_iequirks .dijitTextBox INPUT.dijitValidationInner,
+.dj_iequirks .dijitTextBox INPUT.dijitArrowButtonInner,
+.dj_iequirks .dijitTextBox INPUT.dijitSpinnerButtonInner,
+.dj_iequirks .dijitTextBox INPUT.dijitInputInner,
+.dj_iequirks INPUT.dijitTextBox {
+	font-size: 104%;
+	line-height: 120%; 
+	vertical-align: middle;		
+}
+
+
+
+
+
+
+.dj_ie .dijitReset {    
+    font:inherit;
+}
+
+
+.dijitButtonNode {
+	border-radius: 4px 4px 4px 4px; 
+	-moz-border-radius:4px 4px 4px 4px;  // Firefox
+	-webkit-border-radius: 4px 4px 4px 4px;  // WebKit y Safari
+	-khtml-border-radius: 4px 4px 4px 4px;
+	font-family: 'Open Sans', sans-serif!important;
+	font-size: 18px;  
+}
+
+.dijitDialogFixed{
+	border-radius: 4px 4px 4px 4px; 
+	-moz-border-radius:4px 4px 4px 4px;  // Firefox
+	-webkit-border-radius: 4px 4px 4px 4px;  // WebKit y Safari
+	-khtml-border-radius: 4px 4px 4px 4px;     
+	
+}
+
+.dijitDialog{
+	border-radius: 0px 0px 0px 0px; 
+	-moz-border-radius:0px 0px 0px 0px;  // Firefox
+	-webkit-border-radius: 0px 0px 0px 0px;  // WebKit y Safari
+	-khtml-border-radius: 0px 0px 0px 0px;   
+	
+}
+
+.nihilo .dijitFileInputButton, .nihilo .dijitFileInputText {   
+	border-radius: 4px 4px 4px 4px; 
+	-moz-border-radius:4px 4px 4px 4px;  // Firefox
+	-webkit-border-radius: 4px 4px 4px 4px;  // WebKit y Safari
+	-khtml-border-radius: 4px 4px 4px 4px;
+	font-family: 'Open Sans', sans-serif!important;
+	font-size: 18px;  }
+
+.dijitFileInputVisible{
+	border-radius: 4px 4px 4px 4px; 
+	-moz-border-radius:4px 4px 4px 4px;  // Firefox
+	-webkit-border-radius: 4px 4px 4px 4px;  // WebKit y Safari
+	-khtml-border-radius: 4px 4px 4px 4px;   
+	font-family: 'Open Sans', sans-serif!important;
+	font-size: 18px;  
+}
+
+.nihilo .dijitFileInput{
+	border-radius: 4px 4px 4px 4px; 
+	-moz-border-radius:4px 4px 4px 4px;  // Firefox
+	-webkit-border-radius: 4px 4px 4px 4px;  // WebKit y Safari
+	-khtml-border-radius: 4px 4px 4px 4px;  
+	
+}
+.imgprev {
+	background-image: url(../js/dojo/1.5/custom/template/img/prev.png); 
+}
+
+.labelIndex {
+	font-family: 'Open Sans', sans-serif!important;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: left;
+}
+
+.dj_webkit .dijittextboxdisabled input, .dj_webkit .dijitcomboboxdisabled input, .dj_webkit .dijitspinnerdisabled input {
+	color: #545454;
+}
+
+
+.salirIcon {
+	background-image: url( ../imagenes/salir.png );
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+
+}
+
+.inicioIcon{
+	background-image: url( ../imagenes/inicio.png );
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+}
+	
+.trOrange{
+	background-color: #f0f0f0;
+}
+.trWhite{
+	background-color: #FFFFFF;
+}
+
+.nihilo .dijitTooltipContainer {   
+    font-family: 'Open Sans', sans-serif!important;
+    font-size: 16px;
+}
+
+
+.dj_ie6 .dijitTooltipContainer,
+.dj_iequirks .dijitTooltipContainer,
+.dj_ie .dijitTooltipContainer{
+    font-family: 'Open Sans', sans-serif!important;
+    font-size: 16px;
+}
+
+.dijitTooltipContainer {
+	border: solid black 2px;
+	background: #b8b5b5;
+	color: #545454;
+	font-size: 16px!important;
+}
+.dj_ie .dijitReset li{
+	font-family: 'Open Sans', sans-serif!important;	
+	font-size: 16px;  }
+
+.nihilo .dijitReset li{
+	font-family: 'Open Sans', sans-serif!important;	
+	font-size: 16px;  vertical-align: middle;	
+}
+
+
+.nihilo .dijitComboBox .dijitButtonNode {
+    font-size: 100%;    
+}
+
+
+.dj_ie6 .dijitComboBox,
+.dj_iequirks .dijitComboBox,
+.dj_ie .dijitComboBox{
+	 font-size: 100%;    
+}
+
+
+
+
+
+
+.dijitReadOnly *,
+.dijitDisabled *,
+.dijitReadOnly,
+.dijitDisabled {	
+	cursor: not-allowed !important;
+}
+
+
+.dijitCalendarPopup{
+	font-family: 'Open Sans', sans-serif!important;	
+	font-size: 16px;  }
+
+
+.dijitToasterError .dijitToasterContent{
+	padding:1em;
+	padding-top:0.25em;
+	background:#CC0000;
+	font-family: 'Open Sans', sans-serif!important;	
+	font-size: 125%;
+}
+
+.dijitToasterContainer{
+	width: 35em;
+	margin: 0px;
+	font-family: 'Open Sans', sans-serif!important;
+}
+
+
+#preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding:0;
+    background:#aaa;
+    z-index:999;
+}
+#preloaderContent {
+    position: absolute;
+    border: 2px solid #fff;
+    background-color:#fff;
+    color: #000;
+    font-family: 'Open Sans', sans-serif!important;
+    padding: 25px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.nihilo .dijitMenuPassive .dijitMenuItemHover,
+.nihilo .dijitMenuItemSelected {
+		
+	background-color: #212223!important;
+	color: #9d9d9d;!important
+	-moz-background-color: #212223; 
+	-webkit-background-color: #212223; 
+	-khtml-background-color: #212223; 
+	-moz-color: #9d9d9d;
+	-webkit-color: #9d9d9d;
+	-khtml-color: #9d9d9d;
+	
+}
+
+.dj_quirks .dijitMenuPassive .dijitMenuItemHover,
+.dj_quirks .dijitMenuItemSelected
+.dj_webkit .dijitMenuPassive .dijitMenuItemHover,
+.dj_webkit .dijitMenuItemSelected,
+.dj_chrome .dijitMenuPassive .dijitMenuItemHover,
+.dj_chrome .dijitMenuItemSelected,	
+.dj_contentbox .dijitMenuPassive .dijitMenuItemHover,
+.dj_contentbox .dijitMenuItemSelected{
+	background-color: #e4f4eb;
+	color: #243C5F;
+}
+
+
+<!-- Dojo grid -->
+.nihilo .dojoxGridHeader {
+	background-color: #777777;
+}
+
+.nihilo .dojoxGridHeader .dojoxGridCell { 
+	border: 1px solid;
+	border-color: #d31145 #ACA899 #ACA899 #d31145;
+	background-color: #777777;
+	color: #000 !important;
+	padding-bottom: 1px;
+}
+.nihilo .dojoxGridHeader .dojoxGridCellOver {
+	background-image: none;
+	background-color: #777777;
+	border-bottom-color: #d31145;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom-width: 1px;
+	color: #FFFFFF;
+}
+
+
+.nihilo .dojoxGridHeader.dojoxGridCellFocus.dojoxGridCellOver {
+	background-color: #777777;
+	border-bottom-color: #d31145;
+	border-top-color: #d31145;
+	border-right-color: #d31145;
+	border-left-color: #d31145;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom-width: 1px;
+}
+.nihilo .dojoxGridSortNode{
+	white-space:nowrap;
+	font-size: 0.9em;
+}
+
+.dojoxGridRowOver {
+	border-top-color: #FEBE47;
+	border-bottom-color: #FEBE47;
+	
+	
+	
+}
+
+
+
+
+.dijit_a11y .nihilo .dojoxGridRowSelected { 
+	background-color: #e4f4eb; 
+	border-style: solid; 
+} 
+
+.nihilo .dojoxGridRowOver .dojoxGridCell {
+	background-color: #b6b6b6; 
+}
+.nihilo .dojoxGridRowOdd {
+	background-color: #f0f0f0;	
+}
+
+.nihilo .dojoxGridRowSelected {
+	                  
+	background-color: #e4f4eb;
+}
+
+.nihilo .dojoxGridHeader {
+	background-color:  #777777;
+}
+
+
+.nihilo .dojoxGridHeader .dojoxGridCell { 
+	border-width: 1px;
+	padding-bottom: 0px;
+	border-color: transparent #ACA899 #919191 transparent;
+	background-color: #777777;
+	color: #FFFFFF !important;
+}
+.nihilo .dojoxGridHeader .dojoxGridCellOver {
+	background-color: #777777;
+	color: #000 !important;
+}
+
+
+.dijitDialogUnderlay {
+background: #000000;
+opacity: 0.7;
+}
+
+
+
+.messageDialog {	
+	background-color: #FFFFFF;
+	color: #000000;	
+	text-align: center;		
+	font-family: 'Open Sans', sans-serif!important;
+	font-size:15px;
+	/*padding: 0px 40px 20px;*/
+	height: 18px;
+	
+}
+
+
+.pbwDialogConfirm {
+	margin: 15px;
+	border-top: 1px solid transparent;	
+	padding: 15px;
+	text-align:center;
+	background-color: #fff;
+}
+.pbwDialogConfirm .dijitCheckBox {
+	margin: 0.2em;
+}
+
+.adhesiveLabelIcon {
+  background-image: url('../img/adhesive_label.png');
+  background-repeat: no-repeat;
+  vertical-align:middle;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+}
+.paqueteIcon {
+  background-image: url('../img/package.png');
+  background-repeat: no-repeat;
+  vertical-align:middle;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+}
+
+
+.gestorInstitucionIcon {
+  background-image: url('../img/gestor_institucion.png');
+  background-repeat: no-repeat;
+  vertical-align:middle;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+}
+.gestorEntidadIcon {
+  background-image: url('../img/gestor_entidad.png');
+  background-repeat: no-repeat;
+  vertical-align:middle;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+}
+
+
+.updateDataGestorIcon {
+  background-image: url('../img/update_data_gestor.png');
+  background-repeat: no-repeat;
+  vertical-align:middle;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+}
+.updateTramiteGestorIcon {
+  background-image: url('../img/update_data_tramites_gestor.png');
+  background-repeat: no-repeat;
+  vertical-align:middle;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+}
+
+.labelFilter{
+	color: #9b2442;
+    font-family: 'Open Sans', sans-serif!important;
+    font-size: 0.65em;    
+    font-style: normal;
+    font-variant: normal;    
+    line-height: normal; 
+	
+}
+
+/*
+.solrPagination A:link {
+	font-family: 'Open Sans', sans-serif!important;
+	text-align: right;
+	padding-right:10px;
+	color:#666666;
+	font-weight: normal;
+	font-size: 16px;
+	text-decoration: none;
+
+}
+.solrPagination A:visited {
+	font-family: 'Open Sans', sans-serif!important;
+	text-align: right;
+	padding-right:10px;
+	color:#666666;
+	font-weight: normal;
+	font-size: 16px;
+}
+.solrPagination A:active {
+	font-family: 'Open Sans', sans-serif!important;
+	text-align: right;
+	padding-right:10px;
+	color:#666666;
+	font-weight: normal;
+	font-size: 16px;
+}
+.solrPagination A:hover {
+	font-family: 'Open Sans', sans-serif!important;
+	text-align: right;
+	padding-right:10px;
+	color:#545454;
+	font-weight: normal;
+	font-size: 16px;
+	text-decoration: underline;
+}
+*/
+.cursorHand{
+	cursor: pointer;
+    cursor: hand;
+}
+
+
+
+
+<!-- Dojo grid -->
+
+<!--Calendar -->
+/*
+.claro .dijitTabContainerTop-tabs .dijitTabInnerDiv,
+.claro .dijitTabContainerTop-tabs .dijitTabContent {
+    border-radius: 2px 2px 0px 0px;
+    -moz-border-radius: 2px 2px 0px 0px;
+    -webkit-border-top-left-radius:2px;
+    -webkit-border-top-right-radius:2px;
+} */
+
+
+.placeHolderSmall {
+    font-size: 16px!important;
+}
+
+.dijitReset{font-size:16px!important;}
+p {
+    color: #545454 !important;
+	font-size:16px!important;
+}
+.dijitAccordionTitle .arrowTextDown {
+	display: none;
+	font-size:16px!important;
+	font-weight: normal !important;
+}
+.nihilo .dijitAccordionTitle {
+	background:#fafafa url(images/titleBar.png) repeat-x top left;
+	border-top: 1px solid #dedede;
+	padding: 5px 4px 6px 8px;
+	font-size: 16px!important;
+	font-weight: bold;
+	color: #6d6d6d;
+}
+.nihilo .dijitTitlePaneTitle {
+	background: #cccccc;
+	background:#fff url(images/titleBar.png) repeat-x top left;
+	border:1px solid #bfbfbf;
+	padding:3px 4px;
+	font-size: 16px!important;
+	font-weight: bold;
+	color: #6d6d6d;
+}
+.nihilo .dijitCalendarDateTemplate {
+	
+	font-size: 16px!important;
+	font-weight: 300;
+	text-align: center;
+	padding: 0.3em 0.3em 0.05em 0.3em;
+	letter-spacing: 1px;
+	background-color: #fdfdfd;
+	border:#fdfdfd solid 1px !important;
+}
+.nihilo .dijitToolbar .dijitButtonNode,
+.nihilo .dijitToolbar .dijitComboButton .dijitButtonContents,
+.nihilo .dijitToolbar .dijitComboButton .dijitDownArrowButton {
+	background: none;
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	font-size: 16px!important;
+}
+.bienvenidotitulo{	font-family: 'Open Sans', sans-serif!important;
+	font-size: 16px!important;
+	color: #545454!important;}
+.bienvenidocontenido{	font-family: 'Open Sans', sans-serif!important;
+	font-size: 16px!important;
+	color: #545454!important;}
+	
+
+	
+.dijitPlaceHolder dijitInputField placeHolderSmall {
+    font-size: 16px!important;
+}
+
+/*adiciones 2015*/
+
+.nihilo .dijitMenu, .nihilo .dijitMenuBar {
+	background-color:none!important;
+	border-color:#7a9cd3;
+	/*border:none!important;*/
+}
+#menuBarContainer{
+	background-color:#000!important;
+	border:none!important;
+}
+menubarSistema{
+	background-color:#000!important;
+	border:none!important;
+}
+/*hovermenu*/
+#menuPop1_text{
+	background-color: #212223!important;
+	color: #9d9d9d;!important
+	}
+.dj_quirks .dijitMenuPassive .dijitMenuItemHover, .dj_quirks .dijitMenuItemSelected .dj_webkit .dijitMenuPassive .dijitMenuItemHover, .dj_webkit .dijitMenuItemSelected, .dj_chrome .dijitMenuPassive .dijitMenuItemHover, .dj_chrome .dijitMenuItemSelected, .dj_contentbox .dijitMenuPassive .dijitMenuItemHover, .dj_contentbox .dijitMenuItemSelected {
+	background-color: #212223!important;
+	color: #9d9d9d;!important
+	}
+.dijitReset dijitInline dijitMenuItemLabel dijitMenuItemSelected dijitMenuItem{
+	background-color: #212223!important;
+	color: #9d9d9d;!important
+}
+.dijitReset .dijitMenuItemSelected .dijitMenuItem .dijitMenuItemHover .dijitHover .dijitMenuItemFocused .dijitMenuItemHoverFocused .dijitHoverFocused {
+	background-color:#f5f5f5!important;
+	}
+	
+.nihilo .dijitMenuItem {
+	background:#fff!important;
+}
+.nihilo .dijitMenu, .nihilo .dijitMenuBar {
+	background:#fff!important;
+}
+#menuPop1_text font{color:#fff!important;
+}
+
+/*** alerta campo vacio ***/
+.nihilo .dijitValidationIcon {
+	background-image: none;
+    /*background-image: url("../img/warning_gob.png")!important;*/
+	width: 24px;
+}
+
+/*** imagenes ***/
+/*
+#warning_prof { 
+	background: url(../img/warning_gob.png) no-repeat center;
+	width:24px!important;
+	height:24px!important;
+}
+
+
+#referencia_prof{
+	background: url(../img/help_pago_gob.png) no-repeat center; 
+	width:24px!important;
+	height:24px!important;
+	cursor: pointer;
+	cursor: hand;	
+	
+}
+
+
+#imgLupaCurp{
+	background: url(../img/lupa_gob.png) no-repeat center; 
+	width:15px!important;
+	height:15px!important;
+	cursor: pointer;
+	cursor: hand;
+}
+
+#imgLupaSepomex{
+	background: url(../img/lupa_gob.png) no-repeat center; 
+	width:15px!important;
+	height:15px!important;
+	cursor: pointer;
+	cursor: hand;
+}*/
+
+
+/*
+
+#lupa_prof{
+	background: url(../img/lupa_gob.png) no-repeat center; 
+	width:15px!important;
+	height:15px!important;
+	cursor: pointer;
+	cursor: hand;
+
+}*/
+
+.main-footer .list-info .container .row .col-sm-4 p{
+	color:#FFF!important;
+}
+
+.dijitReset .dijitInline .dijitButtonText{
+	padding:10px 25px;
+}
+
+
+.nihilo .dijitError {	
+    border: 1px solid #CE0923;
+    color: #393C3E;
+    background: #FFF none repeat scroll 0% 0%;
+    background-image: none;
+}
+.dijitPlaceHolder{
+	font-style:normal!important;
+	font-size: 16px !important;
+	font-family: 'Open Sans', sans-serif!important;
+	font-weight:300!important;
+}
+
+mark,mark{background-color:#fff!important;}
+.bg-warning{background-color:#fff!important}
+a.bg-warning:hover{background-color:#fff!important}
+.table>tbody>tr.warning>td,.table>tbody>tr.warning>th,.table>tbody>tr>td.warning,.table>tbody>tr>th.warning,.table>tfoot>tr.warning>td,.table>tfoot>tr.warning>th,.table>tfoot>tr>td.warning,.table>tfoot>tr>th.warning,.table>thead>tr.warning>td,.table>thead>tr.warning>th,.table>thead>tr>td.warning,.table>thead>tr>th.warning{background-color:#fff!important}
+.has-warning .input-group-addon{background-color:#fff!important}
+.alert-warning{background-color:#fff!important;}
+.list-group-item-warning{background-color:#fff!important}
+.panel-warning>.panel-heading{background-color:#fff!important;}
+
+
+
+h3.dijitCalendarYearLabel{
+	font-size:16px!important;
+}
+
+span.dijitInline.dijitCalendarSelectedYear{
+	font-size:16px!important;
+}	
+#colonias_popup li{
+	color:#000!important;
+	background:#FFF!important;
+}
+
+#colonias_popup li:hover{
+	color:#FFF!important;
+	background:#1e90ff!important;
+}
+
+/**boton azul default**/
+ 
+ 
+ 
+ .nihilo .dijitButtonNode:hover{
+	background:#1e90ff!important;
+}
+
+.nihilo .dijitButtonText {
+	color: #fff!important;
+	padding:10px 25px;
+}
+	  
+	  
+.nihilo .dijitButtonNode {
+	border: none!important;
+	border-bottom: none!important;
+	background: #4A90E2!important;
+	background-image: none!important;
+	box-shadow: 0 2px 0 0 #1b5eab;
+	  padding: 0.1em 0.2em 0.2em 0.2em;
+	border-radius: 4px 4px 4px 4px; 
+	-moz-border-radius:4px 4px 4px 4px;  // Firefox
+	-webkit-border-radius: 4px 4px 4px 4px;  // WebKit y Safari
+	-khtml-border-radius: 4px 4px 4px 4px;
+	font-family: 'Open Sans', sans-serif!important;
+    font-size: 16px;  
+	
+	
+}
+
+
+
+
+
+
+ 
+
+.dijitButtonNodeBlue:hover{
+	background:#1e90ff!important;
+}
+
+.dijitButtonTextBlue {
+	color: #fff!important;
+	padding:10px 25px;
+}
+	  
+	  
+.dijitButtonNodeBlue {
+	border: none!important;
+	border-bottom: none!important;
+	background: #4A90E2!important;
+	background-image: none!important;
+	box-shadow: 0 2px 0 0 #1b5eab;
+	  padding: 0.1em 0.2em 0.2em 0.2em;
+	border-radius: 3px 3px 3px 3px; 
+	-moz-border-radius:3px 3px 3px 3px;  // Firefox
+	-webkit-border-radius: 3px 3px 3px 3px;  // WebKit y Safari
+	-khtml-border-radius: 3px 3px 3px 3px;
+	font-family: 'Open Sans', sans-serif!important;
+    font-size: 16px;  
+}
+
+/*Attachment File*/
+
+
+
+/*
+.nihilo .dijitInputContainer INPUT, .nihilo .dijitTextBox {
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    background-image: none;
+    padding-bottom: 4px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 4px !important;
+    margin-right: 10px !important;
+    width: 100%!important;
+  
+}*/
+
+
+
+.dijitFileInputReal {
+    width: 100%;
+    padding: 10px 25;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+.dijitFileInputVisible {
+	border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    font-family: 'Open Sans', sans-serif!important;
+    font-size: 18px;
+    border: 1px solid #DEDEDE;
+    background-image: none!important;
+    padding: 10px 25px!important;
+}
+
+/*
+.nihilo .dijitFakeInput input {
+    border: 1px solid #DEDEDE;
+    background-image: none;
+    line-height: normal;
+    background-position: 0 -30px;
+    
+    padding: 0.2em 0.3em;
+    padding-bottom: 4px !important;
+    padding-top: 4px !important;
+    font-family: 'Open Sans', sans-serif!important;
+    font-size: 16px;  
+}*/
+
+
+
+.nihilo .dijitFileInputButton, .nihilo .dijitFileInputText {
+	color: #fff!important;
+	margin-bottom:5px;
+	padding:10px 25px;
+    border: none!important;
+	border-bottom: none!important;
+	background: #4A90E2!important;
+	background-image: none!important;
+	box-shadow: 0 2px 0 0 #1b5eab;
+	/*  padding: 0.1em 0.2em 0.2em 0.2em;*/
+	border-radius: 3px 3px 3px 3px; 
+	-moz-border-radius:3px 3px 3px 3px;  // Firefox
+	-webkit-border-radius: 3px 3px 3px 3px;  // WebKit y Safari
+	-khtml-border-radius: 3px 3px 3px 3px;
+	font-family: 'Open Sans', sans-serif!important;
+    font-size: 16px;  
+    
+}
+ 
+
+
+/* Boton blanco*/
+
+.dijitButtonTextWhite {
+	color: #333!important;
+	padding:10px 25px;
+}
+.dijitButtonNodeWhite {
+	border: 1px solid #777!important;
+	border-bottom: none!important;
+	background: #fff!important;
+	background-image: none!important;
+	box-shadow: 0 2px 0 0 #444;
+	padding: 0.1em 0.2em 0.2em 0.2em;
+	border-radius: 4px 4px 4px 4px; 
+	-moz-border-radius:4px 4px 4px 4px;  // Firefox
+	-webkit-border-radius: 4px 4px 4px 4px;  // WebKit y Safari
+	-khtml-border-radius: 4px 4px 4px 4px;
+	font-family: 'Open Sans', sans-serif!important;
+    font-size: 16px;  
+}
+.dijitButtonNodeWhite:hover{
+	background:#e6e6e6!important;
+}
+
+
+
+
+
+
+
+
+
+
+/**boton rojo **/
+ 
+
+.dijitButtonNodeRed:hover{
+	background:#c92e2c!important;
+}
+
+.dijitButtonTextRed {
+	color: #fff!important;
+	padding:10px 25px;
+}
+	  
+	  
+.dijitButtonNodeRed {
+	border: none!important;
+	border-bottom: none!important;
+	background: #d9534f!important;
+	background-image: none!important;
+	box-shadow: 0 2px 0 0 #a02522;	
+	  padding: 0.1em 0.2em 0.2em 0.2em;
+	border-radius: 4px 4px 4px 4px; 
+	-moz-border-radius:4px 4px 4px 4px;  // Firefox
+	-webkit-border-radius: 4px 4px 4px 4px;  // WebKit y Safari
+	-khtml-border-radius: 4px 4px 4px 4px;
+	font-family: 'Open Sans', sans-serif!important;
+    font-size: 18px;  
+	
+	
+}
+
+
+/*ancho tablas contenido*/
+.tableContenido tbody tr td table{
+	width:100%!important;
+    overflow-y: scroll!important;
+}
+.dijitReset.dijitInputField.dijitInputContainer{
+	 margin-left: 6px !important;
+}
+/*espaciado celdas*/
+#datosSolicitud tbody tr td table tbody tr td{
+	padding-bottom: 10px !important;
+}
+
+
+
+.dijitContentPane {
+  display: block;
+  overflow: hidden; 
+}
+
+
+/*Estilo TABs DOJO modificado para presidencia HSB 28/05/2015*/
+.nihilo .dijitTabContainerTop-tabs { 
+  padding-left: 0px;
+}
+
+.dijitTabContainerTop-tabs .dijitTab {
+  top: -0px;
+}
+
+.nihilo .dijitTab {
+  line-height: normal;
+  margin: 0 0px 0 0;
+  padding: 0px;
+  background: url( ../img/tabContainerSpritePresidencia.png ) no-repeat 0 -300px!important;
+  color:#545454;
+  
+  border-bottom: 1px #ccc solid;
+}
+
+
+.nihilo .dijitTabInnerDiv {
+  padding: 0px 3px 0px 0px;
+  margin: 0 0 0 4px;
+  background: url( ../img/tabContainerSpritePresidencia.png ) no-repeat right -400px !important;
+   
+}
+
+.nihilo .dijitTabInnerDiv .dijitTabContent {
+  padding: 10px 13px 10px 13px;
+  background: url( ../img/tabContainerSpritePresidencia.png ) repeat-x 0 -350px!important;
+  position: relative;
+}
+
+
+
+.nihilo .dijitTabChecked {
+  background: url( ../img/tabContainerSpritePresidencia.png ) no-repeat 0px -0px!important;
+}
+
+.nihilo .dijitTabChecked .dijitTabInnerDiv {
+  background: url( ../img/tabContainerSpritePresidencia.png ) no-repeat right -100px!important;
+}
+
+.nihilo .dijitTabChecked .dijitTabInnerDiv .dijitTabContent {
+  background: url( ../img/tabContainerSpritePresidencia.png ) repeat-x 0 -50px!important;
+  color: #243C5F !important;
+}
+
+
+.nihilo .dijitTabHover {
+	color: #243C5F;
+	background: url( ../img/tabContainerSpritePresidencia.png ) no-repeat 0px -150px!important;
+}
+.nihilo .dijitTabHover .dijitTabInnerDiv {
+	background: url( ../img/tabContainerSpritePresidencia.png ) no-repeat right -250px!important;
+}
+.nihilo .dijitTabHover .dijitTabInnerDiv .dijitTabContent {
+	background: url( ../img/tabContainerSpritePresidencia.png ) repeat-x 0 -200px!important;
+}
+
+.nihilo .dijitTabContainerTop-spacer {
+  margin-top: -2px;
+}
+
+.nihilo .dijitTabContainerBottom-spacer, .nihilo .dijitTabContainerTop-spacer {
+  height: 1px;
+  border: 0px solid #CCC;
+  background: #CCCCCC;
+}
+
+
+
+
+
+.nihilo .dijitDialogTitleBar {
+    font-family: 'Open Sans', sans-serif!important;
+    font-size: 18px;
+    color: white;   
+    background: #393C3E;
+    padding: 15px;
+    border-bottom: 1px solid transparent;
+    min-height: 16.43px;
+    text-align: center;
+    
+}
+
+/*
+.nihilo .dijitDialogTitleBar{
+	font-family: 'Open Sans', sans-serif!important;	
+	font-size: 16px;  
+	color:white;
+    height: 50px;
+    background: #393C3E;
+    padding: 15px;
+    border-bottom: 1px solid transparent;
+    min-height: 16.43px;
+   
+}*/
+
+.dj_ie6 .dijitDialogTitleBar,
+.dj_ie6 .dijitDialogTitle,
+.dj_iequirks .dijitDialogTitleBar,
+.dj_iequirks .dijitDialogTitle,
+.dj_ie .dijitDialogTitleBar,
+.dj_ie .dijitDialogTitle{
+	font-family: 'Open Sans', sans-serif!important;
+	font-size: 16px;	  
+}
+
+.nihilo .dijitDialog {
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 0px 0px #adadad;
+  border: none;
+}
+
+
+
+
+.dijitTextBoxObservaciones{
+	border-radius: 4px 4px 4px 4px; 
+	-moz-border-radius:4px 4px 4px 4px;  // Firefox
+	-webkit-border-radius: 4px 4px 4px 4px;  // WebKit y Safari
+	-khtml-border-radius: 4px 4px 4px 4px;  
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 4px !important;
+     margin-right: 10px !important;
+	   width: 100%!important;
+	   max-width:700px!important;
+}
+
+
+
+.dijitButtonNode .dijitArrowButtonInner {
+	background: white;
+	background-image: url(../img/spriteArrows2.png);	
+  	background-repeat: no-repeat;
+  	background-position: 0px center;
+  	width: 11px;
+
+}
+
+
+.dijitButtonNodeArrowWhite {
+	border: none!important;
+	border-bottom: none!important;
+	background: #fff!important;
+	background-image: none!important;
+	box-shadow: 0 2px 0 0 #fff;
+	  padding: 0.1em 0.2em 0.2em 0.2em;
+	border-radius: 4px 4px 4px 4px; 
+	-moz-border-radius:4px 4px 4px 4px;  // Firefox
+	-webkit-border-radius: 4px 4px 4px 4px;  // WebKit y Safari
+	-khtml-border-radius: 4px 4px 4px 4px;
+	font-family: 'Open Sans', sans-serif!important;
+    font-size: 16px;  
+	
+	
+}
+
+
+
+
+
+
+#comentario\.idTcomentario_popup li{
+	color:#000!important;
+	background:#FFF!important;
+}
+
+#comentario\.idTcomentario_popup li:hover{
+	color:#FFF!important;
+	background:#1e90ff!important;
+}
+
+/*
+#comentario\.mensaje{
+	max-height: 100%!important;
+	height: 38px;	
+}*/
+
+#comentario\.debeDecir{
+	max-height: 100%!important;
+	height: 38px;	
+}
+
+#comentario\.dice{
+	max-height: 100%!important;
+	height: 38px;	
+}
+
+
+
+
+
+
+
+
+
+.dijitToggleButton, .dijitButton, .dijitDropDownButton, .dijitComboButton {
+  margin: 0.0em;
+}
+
+
+
+
+.nihilo .dijitCalendarMonthLabel {
+    color: #fff;
+    font-weight: normal;
+}
+
+
+.nihilo .dijitCalendarMonthContainer th{
+	background:#222;
+}
+
+
+.dijitCalendarMonthContainer{	
+	vertical-align: middle;	
+}
+
+
+.nihilo .dijitCalendarIncrementControl {
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/spriteRoundedIconsSmallPresidencia.png);
+    background-repeat: no-repeat;
+}
+
+
+.nihilo .dijitCalendarSelectedDate {
+    background-color: #4A90E2 !important;
+    color: black !important;
+    border: #4A90E2 solid 1px !important;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%; 
+    
+    
+    /*border-radius: 40%; 
+	-moz-border-radius:40%;  // Firefox
+	-webkit-border-radius: 40%;  // WebKit y Safari
+	-khtml-border-radius: 40%;*/    
+}
+
+
+/*
+.nihilo .dijitCalendarHoveredDate {
+	background-color: #4A90E2 !important;
+	border: #4A90E2 solid 1px !important;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%; 
+}*/ 
+
+
+.nihilo .dijitCalendarSelectedYear {
+    color: black;
+    padding: 0.2em;
+    padding-bottom: 0.1em;
+    background-color: #4A90E2 !important;
+    border: #4A90E2 solid 1px !important;
+}
+
+.labelError {
+    font-size: 13px;
+    color: #CE0923;
+    display: block;
+}
+
+.labelWithoutError {
+    font-size: 13px;
+    color: #CE0923;
+    display: none;
+}
+
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+	
+    border-top: none;
+    width:33%;
+}
+
+
+
+media="all"
+.icon-new-window:before {	
+    content: "\e164";
+}
+SEP71media="all"
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+.nihilo .dijitDialog .dijitDialogTitle {
+	font-size: 24px;
+	color: #fff;
+    font-weight: 300;
+    text-align: center;
+    /*padding: 0px 4px;*/
+    /*font-size: 0.9em;
+    color: #3243C5F;
+    font-weight: bold;
+    padding: 0px 4px;*/
+}
+
+
+.nihilo .dijitDialogCloseIcon {
+    background-image:none    
+}
+.dijitDialog .closeText {
+    display: block;
+    position: relative;
+    top: 5px;
+    right: 10px;
+    /*right: -21px;*/
+    color: inherit;
+    /*position: absolute;*/
+}
+
+#requisitos table{
+	
+}
+
+.nihilo .dijitTooltip, .nihilo .dijitTooltipDialog {
+    background: transparent;
+    display: none;
+}
+
+
+/*
+.nihilo .dijitDialogCloseIcon {
+	content: "\e108";
+    background-image: none;
+    background-repeat: inherit;    
+    position: absolute;
+    vertical-align: middle;
+    right: 6px;
+    top: 4px;
+    height: 15px;
+    width: 15px;
+    content: "\e164";
+    color:#cc0000;
+    
+}*/
+
+
+
+/*
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    border-top: none;
+}
+*/
+
+
+/*
+.table{
+	border: none;
+}*/

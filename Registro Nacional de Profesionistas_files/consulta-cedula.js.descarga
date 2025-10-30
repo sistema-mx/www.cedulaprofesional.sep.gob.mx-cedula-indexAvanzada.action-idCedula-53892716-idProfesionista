@@ -1,0 +1,351 @@
+
+
+var layout = [{cells:
+	[
+		{ name: 'C&eacute;dula', field: 'idCedula', width: '20%',noresize: true },
+		{ name: 'Nombre', field: 'nombre', width: '20%',noresize: true},
+		{ name: 'Primer apellido', field: 'paterno', width: '20%',noresize: true},
+		{ name: 'Segundo apellido', field: 'materno', width: '20%',noresize: true},
+		{ name: 'Tipo', field: 'tipo', width: '20%',noresize: true}
+	]}
+];
+
+
+function buscaCedula(){
+
+	var form = document.forms[0];	
+	var despliegaTabDetalle=false;
+	
+	var f = new Date();
+	var dia = f.getDate() < 10 ? "0" + f.getDate() : f.getDate();
+	var mes = (f.getMonth() +1) < 10 ? "0"+(f.getMonth() +1) : (f.getMonth() +1);	
+	var anio = f.getFullYear();	
+	var fechaConsulta = anio + "-" + mes + "-" + dia;	
+	var tipoBusqueda = "";		
+	
+    if( dojo.byId('tableCedula').style.display == 'block' ){ 
+    	/*console.log( dijit.byId('condicionesCedula') ); 
+    	if( !(dijit.byId('condicionesCedula').get('checked')) ){
+    		custom.jmessages.alert( {focus:'condicionesCedula',message:"T&eacute;rminos y condiciones no han sido aceptadas"});
+        	return;
+    	}*/    	
+    	
+    	tipoBusqueda = "cedula";
+    	var tmp = dijit.byId('idCedula').get('value');
+    	form.reset();
+    	dijit.byId('idCedula').set('value', tmp );
+    	messagesJS.allWidgets = [];    	
+    	messagesJS.allWidgets = messagesJS.fieldCedula[0].fieldForms.slice();    	
+    	if( util.common.validateGMX( {idForm:'buscaCedulaJson', errorId:'divD'}  ) ){									
+			dojo.byId('divD').focus();
+			return;
+		}
+        
+    }else{   
+    	//console.log("Entro aquí...");
+    	var _value = dijit.byId('materno').get('value');
+    	if( _value != null && _value.trim() != '' ){
+    		_item_lbl = 'validation_lbl_materno';
+    		var _isValid = (new RegExp( "((^[0-9A-Za-z\\s\u00f1\u00d1.,\\-_\u00e1\u00e9\u00ed\u00f3\u00fa\u00c1\u00c9\u00cd\u00d3\u00da\u00e4\u00eb\u00ef\u00f6\u00fc\u00c4\u00cb\u00cf\u00d6\u00dc\u0027\u00B4]?)|(^[0-9A-Za-z\\s\u00f1\u00d1.,\\-_\u00e1\u00e9\u00ed\u00f3\u00fa\u00c1\u00c9\u00cd\u00d3\u00da\u00e4\u00eb\u00ef\u00f6\u00fc\u00c4\u00cb\u00cf\u00d6\u00dc\u0027\u00B4]+))([0-9A-Za-z\\s\u00f1\u00d1.,\\-_\u00e1\u00e9\u00ed\u00f3\u00fa\u00c1\u00c9\u00cd\u00d3\u00da\u00e4\u00eb\u00ef\u00f6\u00fc\u00c4\u00cb\u00cf\u00d6\u00dc\u0027\u00B4]$)" )).test(_value);
+    		if( !_isValid  ){
+    			
+    			dojo.removeClass( _item_lbl, "labelError" );
+				dojo.removeClass( _item_lbl, "labelWithoutError" );
+    			
+    			dojo.byId( _item_lbl ).textContent = "El valor especificado no es v\u00E1lido.";
+    			dojo.addClass( dojo.byId( "widget_"+"materno") , "dijitError")
+    			dojo.addClass( _item_lbl, "labelError" );
+    			
+    			return false;
+    		} else {
+    			dojo.addClass( _item_lbl, "labelWithoutError" );   			
+    		}
+    	}
+    	
+    	
+    	tipoBusqueda = "detallada";
+    	//if( !dijit.byId('condicionesGenerales').get('checked') ){
+    	//	custom.jmessages.alert( {focus:'condicionesGenerales',message:"T&eacute;rminos y condiciones no han sido aceptadas"});
+        //	return;
+    	//}    	
+    	messagesJS.allWidgets = [];    	
+    	messagesJS.allWidgets = messagesJS.fieldGenerales[0].fieldForms.slice();    	
+    	if( util.common.validateGMX( {idForm:'buscaCedulaJson', errorId:'divD'}  ) ){									
+			dojo.byId('divD').focus();
+			return;
+		}    		
+        form.idCedula.value = "";
+        
+    }
+    
+    //blockDialog( 'consultar','<div style="width:100%; text-align: center;" >Espere por favor..<br><img src="'+ messages.context+'img/loading2.gif" alt="Espere por favor..."/></div>');
+    dojo.forEach(_connections, dojo.disconnect);
+    var _detalle = ['detalleCedula','detalleNombre','detalleGenero','detalleProfesion','detalleFecha','detalleInstitucion','detalleTipo'];
+    dojo.forEach( _detalle, function( detalle ){ dojo.byId(detalle).innerHTML="";} );
+    var page;          
+    
+    var onLoadComplete = {        				
+    	onComplete: function( items, store ){ 
+    		var mensaje = "";    		
+    		if( tipoBusqueda == "cedula" ){
+    			var lcedula = $('#idCedula').val();
+				mensaje = "No se encontr&oacute; informaci&oacute;n para el n&uacute;mero de c&eacute;dula especificado: <strong>" +  lcedula + "</strong>. <br/>Fecha de consulta: <strong>" + fechaConsulta + "</strong>";
+			}else{
+				var ldetalle = $('#nombre').val() + " " + $('#paterno').val() + " " + $('#materno').val();
+				mensaje = "No se encontr&oacute; informaci&oacute;n para los criterios de b&uacute;squeda especificados: <strong>" + ldetalle + "</strong>. <br/>Fecha de consulta: <strong>" + fechaConsulta + "</strong>";					
+			}
+    		if( store==null || store == '' ){
+				datanotfound = new custom.MyDialog({
+			    	title: "<span class='dialogTitle'>Mensaje</span>",
+					content: "<span class='messageDialog'>" + mensaje + ".</span>",
+					style: "width: 500px;"
+				});
+				datanotfound.show(); 
+			}
+			if( store != null && store._getItemsArray().length == 0 ){
+				datanotfound = new custom.MyDialog({
+			    	title: "<span class='dialogTitle'>Mensaje</span>",
+					content: "<span class='messageDialog' >" + mensaje + ".</span>",
+					style: "width: 500px;"
+				});
+				datanotfound.show();
+			}else if( store != null && store._getItemsArray().length ==1){	
+					//alert("Es uno");
+					despliegaTabDetalle=true;
+			}else if( store != null && store._getItemsArray().length >= 1000 ){		
+				//cedula_4_de_20
+				//<a href='javascript:goDownloadFiles();' style='cursor:pointer'>aqu&iacute;</a>
+				
+				datanotfound = new custom.MyDialog({
+			    	title: "<span class='dialogTitle'>Mensaje</span>",
+					content: "<span class='messageDialog' >"+messages.limite+"</span>",
+					style: "width: 900px;"
+				});
+				datanotfound.show(); 
+			}
+			dijit.byId('dialogBlock').hide();
+			
+    		_connections=[];
+    		_connections.push( dojo.connect( dijit.byId("consulta"), "onClick", buscaCedula ) );         	
+        	
+		}
+    };
+    try{
+	    if( dojo.byId('tableCedula').style.display == 'block' ){
+	    	pageTracker._trackPageview("Consultar Cedula Basica");
+	    }else{
+	    	pageTracker._trackPageview("Consultar Cedula Detallada");	    	
+	    }
+    }catch(e){
+    	window.status = "ANALISIS: Consultar Cedula....";		
+    }
+    util.common.xhrPost({
+  	  url: messagesJS.context+'buscaCedulaJson.action',
+  	  sync: false,
+  	  content: { json: dojo.toJson(dojo.formToObject("buscaCedulaJson")) },
+  	  contentType: "application/x-www-form-urlencoded; charset=utf-8",
+  	  handleAs: "json",
+  	  handle: function(response, ioArgs){
+ 		  var storeJson = new dojo.data.ItemFileReadStore({data: response}); 
+ 		    if( dijit.byId( 'cedulasGrid' ) ) {
+ 				dijit.byId( 'cedulasGrid' ).destroy(true);
+ 			}   
+ 		    
+ 		   var attributesItems =  storeJson._getItemsArray().length;
+ 		  
+ 		  //console.log("store"+storeJson);
+ 		  //console.log("atributesss"+attributesItems);
+
+ 		    page  = new custom.PageTable({
+ 		    	structure: layout,
+ 		    	structureExport: exportLayout,
+ 		    	tracker: pageTracker,
+ 		    	templateFilter: templateFilter,
+ 				store: storeJson,
+ 				exportStore: storeJson,   			
+ 				exporter: false,
+ 				onLoadComplete:onLoadComplete,
+ 				gridHeight:"240",
+ 				gridWidth:"710",
+ 				onSelected: getEvalGridInfo       			
+ 				},dojo.byId('cedulasGrid'));
+ 			
+ 			page.startup(); 	
+ 			try{
+ 				//alert(despliegaTabDetalle);
+ 				dijit.byId( 'mainContainer' ).selectChild( "tab2" );
+ 			}catch( ignored ){
+ 				
+ 			}
+
+	  },
+      load: function(responseObject, ioArgs) { 
+		  dijit.byId('dialogBlock').hide();
+  	  },
+  	  error: function(error){
+  		  dijit.byId('dialogBlock').hide();
+  		  custom.jmessages.alert( {focus:'consultar',message:'Ocurri&oacute; un error realizando la consulta'});
+  		  dijit.byId('dialogBlock').hide();
+	  	  try{
+	  		   if( dojo.byId('tableCedula').style.display == 'block' ){
+	  		    	pageTracker._trackPageview("Error Consultar Cedula Basica");
+	  		    }else{
+	  		    	pageTracker._trackPageview("Error Consultar Cedula Detallada");
+	  		    }
+	  	    }catch(e){
+	  	    	window.status = "ANALISIS: Recuperar datos de consulta....";		
+	  	    }
+  		  _connections=[];
+  		  _connections.push( dojo.connect( dijit.byId("consulta"), "onClick", buscaCedula ) );         	
+  		  
+  	  }
+      	 
+  	});
+  	
+  	
+   
+
+}
+
+
+function getEvalGridInfo(inRowIndex){        	
+    var datarow = this.getItem(inRowIndex);  // get the row data
+    var viewForm = document.forms[0];           
+    if( datarow != null && datarow != '' ){
+        dojo.byId("detalleCedula").innerHTML = this.store.getValue(datarow,"idCedula");	            
+        var nombre = this.store.getValue(datarow,"nombre") + " ";
+        nombre+=this.store.getValue(datarow,"paterno") + " ";
+        nombre+=this.store.getValue(datarow,"materno");
+        dojo.byId("detalleNombre").innerHTML = nombre;
+        if( this.store.getValue(datarow,"sexo") == "1" ){
+        	dojo.byId("detalleGenero").innerHTML = _genero.hombre;
+        }else if( this.store.getValue(datarow,"sexo") == "2" ){
+        	dojo.byId("detalleGenero").innerHTML = _genero.mujer;
+        }                  
+        dojo.byId("detalleProfesion").innerHTML = this.store.getValue(datarow,"titulo");
+        dojo.byId("detalleFecha").innerHTML = this.store.getValue(datarow,"anioreg");
+        dojo.byId("detalleInstitucion").innerHTML = this.store.getValue( datarow, "desins" );
+        dojo.byId("detalleTipo").innerHTML = this.store.getValue( datarow, "tipo" );
+        try{
+        	dijit.byId( 'mainContainer' ).selectChild( "tab3" );
+        }catch(ignored){
+        	
+        }
+    }
+    
+	
+    this.updateRowStyles(inRowIndex);     // leave this to change the style of the row to a selected state
+}
+
+
+
+function showBusqueda(){
+    if( dojo.byId('tableCedula').style.display == 'block' ){
+    	dojo.byId('tableCedula').style.display = 'none';
+    	dojo.byId('tableGenerales').style.display = 'block';
+    	dojo.byId( 'nombre' ).focus();
+    	dojo.byId( 'paterno' ).focus();
+    	dojo.byId( 'materno' ).focus();
+    	dojo.byId( 'condiciones' ).focus();
+    	
+    }else{
+    	dojo.byId('tableCedula').style.display = 'block';
+    	dojo.byId('tableGenerales').style.display = 'none';
+        
+    } 
+} 
+
+
+/*
+function showHelp(){
+	dijit.byId('helpDialog').show();
+}*/
+
+
+
+
+dojo.addOnLoad(function() {
+	//if( messages.first != 'false' ){
+	//	dijit.byId("bienvenidaDialog").show();
+	//}
+	
+	var regExpString = '((^[A-Za-z\\s\u00F1\u00D1 \u00E1\u00E9\u00ED\u00F3\u00FA\u00C1\u00C9\u00CD\u00D3\u00DA\u00E4\u00EB\u00EF\u00F6\u00FC\u00C4\u00CB\u00CF\u00D6\u00DC]?)|(^[A-Za-z\\s\u00F1\u00D1 \u00E1\u00E9\u00ED\u00F3\u00FA\u00C1\u00C9\u00CD\u00D3\u00DA\u00E4\u00EB\u00EF\u00F6\u00FC\u00C4\u00CB\u00CF\u00D6\u00DC]+))([A-Za-z\\s\u00F1\u00D1 \u00E1\u00E9\u00ED\u00F3\u00FA\u00C1\u00C9\u00CD\u00D3\u00DA\u00E4\u00EB\u00EF\u00F6\u00FC\u00C4\u00CB\u00CF\u00D6\u00DC]$)';
+	messagesJS.fieldCedula= [{fieldForms:[
+							{object_type:util.constants.DOJO_TYPE.validation, 
+								name: 'idCedula', 
+								invalidMessage: "Ingrese caracteres v\u00E1lidos", 
+								required: true, regExp: util.constants.NUMBER_VALID,
+								constraints: {min:7, max:8, rangeMessage:'La longitud m\u00ednima debe ser 7 d\u00EDgitos y m\u00e1xima de 8', invalidMessage:'Ingrese caracteres v\u00E1lidos'},
+								placeHolder:'N\u00famero de C\u00e9dula',
+								maxLength:8
+							}]}];
+	 
+	messagesJS.fieldGenerales = [{fieldForms:[	
+							{object_type:util.constants.DOJO_TYPE.validation, 
+								name: 'nombre', 
+								invalidMessage: "Ingresar nombre(s)", 
+								required: true,							
+								placeHolder:'Ingresar nombre(s)',
+								invalidMessage:"Ingresar solo letras y no acentuar las palabras",
+								uppercase:true,
+								regExp: util.constants.NAME_PROFE_VALID
+								//regExp:regExpString
+							},
+							{object_type:util.constants.DOJO_TYPE.validation, 
+								name: 'paterno', invalidMessage: "Primer apellido", 
+								required: true,							
+								placeHolder:'Primer apellido',
+								invalidMessage:"Ingresar solo letras y no acentuar las palabras",
+								uppercase:true,
+								regExp: util.constants.NAME_PROFE_VALID
+								//regExp:regExpString
+							},
+							{object_type:util.constants.DOJO_TYPE.validation, 
+								name: 'materno', invalidMessage: "Segundo apellido", 
+								required: false,							
+								placeHolder:'Segundo apellido',
+								invalidMessage:"Ingresar solo letras y no acentuar las palabras",
+								uppercase:true,
+								regExp: util.constants.NAME_PROFE_VALID
+								//regExp:regExpString
+							}]
+	 
+	 					}];
+	
+		
+	util.common.createField( messagesJS.fieldCedula );
+	util.common.createField( messagesJS.fieldGenerales );
+		
+						
+		
+   
+   
+	
+	
+	
+	
+	
+   	_connections.push( dojo.connect( dijit.byId("consulta"), "onClick", buscaCedula ) );         	
+	
+   	
+ 	dojo.connect( dojo.byId("dialogBlock"), "onkeypress", function(evt){ if(evt.charOrCode == dojo.keys.ESCAPE){ dojo.stopEvent(evt); return;} });	 
+   
+ 	
+ 	
+ 	util.common.onLoadGMX({idForm:'buscaCedulaJson'});
+ 	
+ 	
+ 	dojo.byId('breadcrumb_rnp').focus();
+ 	//dojo.connect(window,"onscroll",dijit.byId("bienvenidaDialog"), function(){});
+ 	//dojo.connect(window, "onresize", alert('1'));
+ 	//dojo.connect(window, "onresize", dijit.byId("formDialog"), dijit.byId("formDialog").layout);
+ 	//dojo.connect(window, "onresize", dijit.byId("bienvenidaDialog"), dijit.byId("bienvenidaDialog").layout);
+ 	//dojo.connect(window, "onresize", dijit.byId("helpDialog"), dijit.byId("helpDialog").layout);
+ 	
+    /*
+    dojo.forEach( messagesJS.allWidgets, function (item){
+    	if(dijit.byId( item.id )){
+    		dijit.byId( item.id ).set('displayMessage', function(){});
+    	}
+    });*/
+});

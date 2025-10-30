@@ -1,0 +1,68 @@
+function closeTerminosCondiciones(){
+	var aceptar = false;
+	if(window.parent.isDownload){
+		aceptar = dijit.byId('radioOne').get("checked");
+	}else{
+		aceptar = dijit.byId('radioOne').get("checked");
+	}
+	if( aceptar ){
+		accept();
+	}else{
+		decline();
+	}
+}
+
+function createRemoveSession( acepta ){
+	var session = window.parent.dojo.byId('sessionId').value;
+	if( session == 'undefined' || session == null || session == "" ){
+		session = 'null';
+	}
+	dojo.xhrPost({
+	  	  url: messages.context+"startDownload.action",
+	  	  sync: true,            	  
+	  	  content: { json: "{acepta:"+acepta+", sessionId: " + session  +"}" },
+	  	  handleAs: "json",
+	  	  handle: function(response, ioArgs){	  		 
+	  		window.parent.dojo.byId('sessionId').value = response.sessionId;
+		  },
+	      load: function(responseObject, ioArgs) { 
+			  
+	  	  },
+	  	  error: function(error){
+	  		custom.jmessages.alert( {focus:'consultar',message:'Ocurri&oacute; un error realizando la descarga de archivos'});
+	  	  }
+	      	 
+	  });
+}
+
+function accept() { 
+	if(window.parent.isDownload){
+		
+		createRemoveSession( true );
+		dijit.byId('terminos').set('checked', true );	  
+		//dijit.byId("formDialog").hide();
+	}else{
+		//dijit.byId('condicionesCedula').set('checked', true );	              
+		//dijit.byId('condicionesGenerales').set('checked', true );
+		//dijit.byId("formDialog").hide();
+	}
+	
+	
+}
+function decline() {
+	if(window.parent.isDownload){
+		
+		createRemoveSession( false );
+		window.parent.dijit.byId('terminos').set('checked', false );
+		//window.parent.dijit.byId("formDialog").hide(); 
+	}else{
+		//window.parent.dijit.byId('condicionesCedula').set('checked', false );	              
+		//window.parent.dijit.byId('condicionesGenerales').set('checked', false );	
+		//window.parent.dijit.byId("formDialog").hide(); 
+	}
+	  
+}
+
+function showTerminos(){
+	//dijit.byId("formDialog").show();	
+}
